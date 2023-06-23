@@ -25,8 +25,11 @@ The request should include the following JSON data in the request body:
    "SIGNE_ASTROLOGIQUE": "string"
 }
 
-# Response Format
-# The API responds with the following JSON data:
+Response Format
+The API responds with the following JSON data:
+
+json
+Copy code
 {
    "REPONSE": "string"
 }
@@ -54,5 +57,8 @@ For a detailed list of dependencies and their versions, refer to the requirement
 
 License
 This project is licensed under the MIT License.
+
+vbnet
+Copy code
 
 Feel free to modify the content as needed to fit your project's requirements.
