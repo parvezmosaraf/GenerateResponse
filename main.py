@@ -4,19 +4,23 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('generate_response.html')
+    return render_template('generate_response.html', prenom='', nom='', date_naissance='', sexe='',
+                           chemin_vie='', signe_lunaire='', signe_astrologique='', message='')
 
 @app.route('/api/generate-response', methods=['POST'])
 def generate_response():
-    # Get the request data from the form
-    nom = request.form.get('nom', '')
-    prenom = request.form.get('prenom', '')
-    date_naissance = request.form.get('date_naissance', '')
-    sexe = request.form.get('sexe', '')
-    message = request.form.get('message', '')
-    chemin_vie = request.form.get('chemin_vie', '')
-    signe_lunaire = request.form.get('signe_lunaire', '')
-    signe_astrologique = request.form.get('signe_astrologique', '')
+    # Get the request data as JSON
+    request_data = request.get_json()
+
+    # Extract the form data from the request data
+    nom = request_data.get('nom', '')
+    prenom = request_data.get('prenom', '')
+    date_naissance = request_data.get('date_naissance', '')
+    sexe = request_data.get('sexe', '')
+    message = request_data.get('message', '')
+    chemin_vie = request_data.get('chemin_vie', '')
+    signe_lunaire = request_data.get('signe_lunaire', '')
+    signe_astrologique = request_data.get('signe_astrologique', '')
 
     # Perform any necessary processing or logic to generate the response
     response = f"Hello, {prenom} {nom}! Thank you for your message. Your date of birth is {date_naissance}. You identify as {sexe}. Your life path is {chemin_vie}. Your lunar sign is {signe_lunaire}. Your astrological sign is {signe_astrologique}. Your message is: {message}. This is a generated response."

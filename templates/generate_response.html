@@ -109,14 +109,14 @@
 
         submitBtn.addEventListener('click', () => {
             const formData = {
-                NOM: document.getElementById('nom').value,
-                PRENOM: document.getElementById('prenom').value,
-                DATE_NAISSANCE: document.getElementById('date_naissance').value,
-                SEXE: document.getElementById('sexe').value,
-                MESSAGE: document.getElementById('message').value,
-                CHEMIN_VIE: document.getElementById('chemin_vie').value,
-                SIGNE_LUNAIRE: document.getElementById('signe_lunaire').value,
-                SIGNE_ASTROLOGIQUE: document.getElementById('signe_astrologique').value
+                nom: document.getElementById('nom').value,
+                prenom: document.getElementById('prenom').value,
+                date_naissance: document.getElementById('date_naissance').value,
+                sexe: document.getElementById('sexe').value,
+                message: document.getElementById('message').value,
+                chemin_vie: document.getElementById('chemin_vie').value,
+                signe_lunaire: document.getElementById('signe_lunaire').value,
+                signe_astrologique: document.getElementById('signe_astrologique').value
             };
 
             // Send AJAX POST request to the Flask API
