@@ -42,5 +42,6 @@ def generate_response():
     # Return the response as JSON
     return jsonify(response_data)
 
+
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
