@@ -1,0 +1,11 @@
+# .gitlab-ci.yml
+
+stages:
+  - test
+
+test:
+  stage: test
+  script:
+    - echo "Running tests..."
+    - python main.py  # Replace this with the command to run your tests
+

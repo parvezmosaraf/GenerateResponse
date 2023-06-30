@@ -7,6 +7,9 @@ def index():
     return render_template('generate_response.html', prenom='', nom='', date_naissance='', sexe='',
                            chemin_vie='', signe_lunaire='', signe_astrologique='', message='')
 
+
+#api endpoint
+
 @app.route('/api/generate-response', methods=['POST'])
 def generate_response():
     # Get the request data as JSON
